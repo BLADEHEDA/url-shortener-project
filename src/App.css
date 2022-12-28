@@ -6,17 +6,17 @@
 --Grayish-Violet: hsl(257, 7%, 63%);
 --Very-Dark-Blue: hsl(255, 11%, 22%);
 --Very-Dark-Violet: hsl(260, 8%, 14%);
+--Gray1: hsl(0, 20%, 94%);
 }
 
 *{
   margin:0;
   padding:0;
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 body{
   width:100%;
-  height: 100%;
-  padding:1.5em; 
+  height: 100%; 
 }
 img{
   max-width:100%;
@@ -30,6 +30,7 @@ button{
  .mobile{
   display:flex;
   justify-content:space-between;
+  padding:1.5em;
 }
 .desktop{
   display:none;
@@ -67,29 +68,179 @@ hr{
 }
 .btn-1{
   background : var(--Cyan);
-  padding: 1em; ;
+  padding: 1em;
   color:white;
+}
+.illustrate{
+  margin-top: 1.5em;
+  height:60vh;
+  margin-bottom: 2em;
+  padding:1.5em;
+  overflow: hidden;
+}
+.ilustrate-img{
+  min-width: 30em;
+}
+.main-header{
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--Dark-Violet);
+  padding: 0em 1.5em;
+}
+.main-content{
+  padding: 1em 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 30px;
+}
+.btn{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+  margin-top: 0.5em;
 }
 .show{
   display: block;
 }
+/* the design of the main barcomponent  */
+.main-link{
+  background-color:var(--Dark-Violet);
+  background-image: url("./components/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 12em -5em;
+  margin: 1.5em;
+  padding: 1.2em;
+  border-radius: 5px;
+  margin-bottom:4em;
+}
+.link{
+  width: 100%;
+  padding:0.7em;
+  border-radius: 7px;
+  margin-bottom:1em;
+  font-size: 17px;
+  border: none;
+}
+.link:focus{
+  outline: none;
+}
+.statistics{
+  margin: 2.5em;
+  text-align: center;
+  margin-bottom: 5em;
+}
+.ststs-content{
+  line-height: 25px;
+  margin-top: 1em;
+}
+/* design of the brand section  */
+.brand{
+  margin: 1.5em;
+  padding:  1.5em;
+  text-align: center;
+  font-size: 16px;
+ background: white;
+ margin-bottom: 3em;
+}
+.chained{
+  border-radius: 5px;
+  background: rgb(246, 243, 243);
+  padding-bottom: 1em;
+}
+.brand-image{
+  background-color:var(--Dark-Violet);
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  margin: 0 auto;
+  margin-top: -4em;
+  margin-bottom: 2em;
+}
+.brand-img{
+ margin-top: 1em;
+}
+.brand-content{
+  line-height: 28px;
+  font-size:18px;
+}
+/* the design of the boost section  */
+.boost{
+  background-color:var(--Dark-Violet);
+  padding:7em 0em;
+  background-image: url("./components/images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boost-head{
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  font-size:35px;
 
 }
-@media only screen and (min-width:480px){
+.btn0{
+  margin-bottom:0em;
+  margin-top:2em;
+}
+/* the design of the logo */
+.footer{
+  text-align: center;;
+  background:var(--Very-Dark-Blue) ;
+  color:white;
+  padding:3em;
+}
+.f-logo{
+  font-weight: 900;
+  margin-bottom: 1em;
+}
+.footer-links{
+  list-style: none;
+}
+.f-link{
+  color:white;
+  text-decoration: none;
+}
+.f-links{
+  text-decoration: none;
+  padding: 0.3em;
+}
+#f-link1{
+  margin-bottom: 0.8em;
+  font-weight: bold;
+  font-size: 18px;
+}
+.f-link1{
+  margin-top: 1em;
+}
+.footer-icons{
+justify-content: center;
+  display: flex;
+  margin-top: 2em;
+}
+.icons{
+  padding:0em 0.5em 0em 0.5em;
+}
+}
+@media only screen and (min-width:481px){
   .desktop{
     display:flex;
     justify-content:space-between;
+       padding: 2em 5em;
   }
   .mobile{
     display:none;
   }
   .des-left{
     display:flex;
+    /* border: solid 1px black; */
+    flex: 80%;
   }
 .navlinks{
   list-style:none;
-  /* border: solid 1px black; */
-    margin-top:-1.8em;
+  border: solid 1px black;
+    margin-top:-3.8em;
+    margin-left: -6em;
 }
   .navlinks  a{
     text-decoration: none;

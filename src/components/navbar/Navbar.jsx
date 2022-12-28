@@ -3,10 +3,6 @@ import logo from "../images/logo.svg"
 import hamburger from "../images/icon-menu.svg"
 import Button from "../button/Button"
 
-
-
-
-
 const Navbar = () => {
 
   // usestae to hide and show components based on button click 
@@ -27,7 +23,7 @@ const Navbar = () => {
            <li className="navlink"><a href="/"> Pricing</a> </li>  
            <li className="navlink"><a href="/"> Resources</a> </li> <hr />
            <li className="navlink"><a href="/">Login </a> </li>
-           {/* na yi this wey no di chane when reused */}
+         {/* passing styles as props to be able to customize it whenever reusing the button  */}
             <Button style={{  marginTop:"2em" , width:"90%",borderRadius:"30px", fontSize:"20px",fontWeight:"bold" ,padding:"0.5em 0em"}} text="Sign Up"/>
             </ul>
             </div>
@@ -46,7 +42,8 @@ const Navbar = () => {
           <div className="des-right">
             <div className="b1">login</div>
             <div className="b2">
-              <Button style= {{background:"green" }} text="login" />
+            <Button style={{ borderRadius:"10px", 
+            fontSize:"10px",fontWeight:"bold" ,padding:"0.5em 1em"}} text="Sign Up"/>
             </div>
           </div>
         </nav>
