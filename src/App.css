@@ -70,7 +70,9 @@ hr{
   background : var(--Cyan);
   padding: 1em;
   color:white;
+ 
 }
+/* the design of the main barcomponent  */
 .illustrate{
   margin-top: 1.5em;
   height:60vh;
@@ -94,15 +96,13 @@ hr{
   line-height: 30px;
 }
 .btn{
-  width: 50%;
-  margin: 0 auto;
   margin-bottom: 5em;
   margin-top: 0.5em;
 }
 .show{
   display: block;
 }
-/* the design of the main barcomponent  */
+/* below is the design of the link section */
 .main-link{
   background-color:var(--Dark-Violet);
   background-image: url("./components/images/bg-shorten-mobile.svg");
@@ -177,13 +177,14 @@ hr{
   text-align:center;
   font-weight:bold;
   font-size:35px;
-
 }
 .btn0{
+  width: 50%;
+  margin: 0 auto;
   margin-bottom:0em;
   margin-top:2em;
 }
-/* the design of the logo */
+/* the design of the footer */
 .footer{
   text-align: center;;
   background:var(--Very-Dark-Blue) ;
@@ -222,39 +223,276 @@ justify-content: center;
   padding:0em 0.5em 0em 0.5em;
 }
 }
+
 @media only screen and (min-width:481px){
   .desktop{
     display:flex;
     justify-content:space-between;
-       padding: 2em 5em;
+    padding: 2em 2em 1em 2em;
   }
   .mobile{
     display:none;
   }
   .des-left{
     display:flex;
-    /* border: solid 1px black; */
     flex: 80%;
-  }
-.navlinks{
-  list-style:none;
-  border: solid 1px black;
-    margin-top:-3.8em;
-    margin-left: -6em;
-}
-  .navlinks  a{
-    text-decoration: none;
-    margin-left:1.5em;
-    font-size:0.8em;
-    /* margin-top:-3em; */
-    color:var(--Very-Dark-Blue);
-    /* border: solid 1px black; */
-    
   }
   .des-right{
     display:flex;
+    flex: 20%;
+    padding-top: 0.2em;
   }
   .logo{
-    width:6em;
+    width:5em;
   }
+
+.navlinks{
+  list-style:none;
+    margin-top:-4em;
+    margin-left: -1em;
 }
+  .navlinks  a{
+    text-decoration: none;
+    margin-right:1.5em;
+    font-size:0.8em;
+    color:var(--Very-Dark-Blue);
+  }
+  .b1{
+    font-size:0.8em;
+    color:var(--Very-Dark-Blue);
+    margin-right: 1em;
+    flex: 20%;
+    text-align: end;
+    margin-top: 0.3em;
+  }
+  .b2{
+ flex: 20%;
+  }
+  .main{
+    display:flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+  /* the design of the main barcomponent  */
+.illustrate{
+  margin-top: 0em;
+  height:60vh;
+  /* width: 100vw; */
+  overflow: hidden;
+}
+.main-header{
+  font-size: 2em;
+  text-align: start;
+  padding: 0em 0.8em;
+  margin-top: 1em;
+}
+.main-content{
+  padding: 1em 1em;
+  text-align: start;
+  font-size: 1em;
+  line-height: 25px;
+  margin: 0em 1em;
+  width:100%;
+}
+.btn{
+  width: 60%;
+  margin: 2em 1.7em;
+  margin-bottom: 5em;
+  margin-top: 1em;
+}
+.main-link{
+  background-color:var(--Dark-Violet);
+  background-image: url("./components/images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 12em -5em;
+  margin: 1.5em 2em;
+  padding: 1.5em 1em;
+  border-radius: 5px;
+  display: flex;
+}
+.link-input{
+  flex: 67%;
+  margin-right: 0.7em;
+}
+.stats-header{
+  font-size: 1.6em;
+  margin-top: 1em;
+  }
+  .statistics{
+    margin: 0 auto;
+    margin-bottom: 3em;
+  }
+  .ststs-content{
+    line-height: 21px;
+    font-size: 0.9em;
+    margin: 0 auto;
+    width:50%;
+    margin-top: 0.8em;
+  }
+  .brand1{
+    display: flex;
+    margin: 0em 1em;
+  }
+  .brand-image{
+    height: 3em;
+    width: 3em;
+    margin: 0;
+    margin-top: -3em;
+    margin-bottom: 1em;
+  }
+  .brand-img{
+   margin: 0.5em;
+   width: 2em;
+  }
+  .brand-content{
+    line-height: 21px;
+    font-size:12px;
+    margin-top: 0.8em;
+  }
+.brand-head{
+  font-size: 0.9em;
+  text-align: start;
+}
+.brand{ 
+  margin: 1em;
+  padding:  1em;
+  text-align: start;
+  font-size: 16px;
+ }
+ .btn0{
+  width: 30%;
+  margin-bottom:0em;
+  margin-top:1em;
+}
+.boost{
+  padding:3em 0em;
+}
+.boost-head{
+  font-size:35px;
+}
+}
+
+  @media only screen and (min-width:721px){
+    .desktop{
+         padding: 2em 2em 1em 5em;
+    }
+    .navlinks{
+        margin-top:-4em;
+        margin-left: -4em;
+    }
+    .main-header{
+      font-size: 3em;
+      padding: 0em 1.5em;
+      margin-top: 1em;
+    }
+    .main-content{
+      padding: 1em 0.5em;
+      font-size: 1em;
+      line-height: 25px;
+      margin: 0em 4em;
+      width:60%;
+    }
+    .btn{
+      width: 37%;
+      margin: 2em 4.5em;
+      margin-bottom: 5em;
+      margin-top: 1em;
+    }
+    .main-link{
+      margin: 1.5em 4.5em;
+      padding: 2em 2.5em;
+      border-radius: 5px;
+      display: flex;
+    }
+    .stats-header{
+    font-size: 1.8em;
+    }
+    .statistics{
+      margin: 0 auto;
+      margin-bottom: 3em;
+      margin-top: 4em;
+    }
+    .ststs-content{
+      font-size: 0.9em;
+      width: 30%;
+    }
+
+    .brand1{
+      display: flex;
+    margin: 0em 3em;
+    }
+    .brand-image{
+      height: 4em;
+      width: 4em;
+      margin: 0;
+      margin-top: -4em;
+      margin-bottom: 2em;
+    }
+    .brand-img{
+    margin: 1em;
+    width: 2em;
+    }
+
+    .brand-content{
+      line-height: 23px;
+      font-size:15px;
+      margin-top: 1em;
+    }
+    .brand-head{
+    font-size: 1.4em;
+    text-align: center;
+    text-align: start; 
+    }
+    .brand{
+    margin: 1.5em;
+      padding:  1.5em; 
+      font-size: 16px;
+    margin-bottom: 3em;
+    }
+   
+    .btn0{
+      width: 15%;
+      margin-top:1em;
+    }
+    .boost-head{
+      font-size:30px;
+    }
+        /* the design of the footer */
+    .footer{
+      text-align: start;;
+      background:var(--Very-Dark-Blue) ;
+      color:white;
+      padding:3em;
+      display: flex;
+      justify-content: space-around;
+    }
+    .f-logo{
+      font-weight: 600;
+      margin-bottom: 0em;  
+      flex: 22%;
+    }
+    .footer-links{
+      display: flex;
+      justify-content: space-evenly;
+       flex: 40%;
+    }
+    #f-link1{
+      margin-bottom: 0em;
+      font-weight: bold;
+      font-size: 14px;
+      /* border: solid 1px black; */
+    }
+    .f-link{
+      font-size: 14px;
+    }
+    .f-link1{
+      margin-top: 0em;
+    }
+    .footer-icons{
+      justify-content: center;
+        display: flex;
+        margin-top: 2em;
+        flex: 30%;
+      }
+  }

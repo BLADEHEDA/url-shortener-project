@@ -28,9 +28,11 @@ function App() {
       <Mainbar/>
       <div className="chained"> 
       <Link/>
-      <Brand title={brand1.title} img={recog} text={brand1.text} /> 
-      <Brand title={brand2.title} img={records} text={brand2.text} /> 
-      <Brand title={brand3.title} img={full} text={brand3.text} />
+        <div className="brand1">
+        <Brand  title={brand1.title} img={recog} text={brand1.text} /> 
+        <Brand style={{marginTop:"4em"}} title={brand2.title} img={records} text={brand2.text} /> 
+        <Brand  style={{marginTop:"6em"}} title={brand3.title} img={full} text={brand3.text} />
+        </div>  
       </div>
       <Footer/>
       

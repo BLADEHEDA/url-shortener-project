@@ -42,8 +42,8 @@ const Navbar = () => {
           <div className="des-right">
             <div className="b1">login</div>
             <div className="b2">
-            <Button style={{ borderRadius:"10px", 
-            fontSize:"10px",fontWeight:"bold" ,padding:"0.5em 1em"}} text="Sign Up"/>
+            <Button style={{ width:"5em" ,borderRadius:"15px", 
+            fontSize:"10px",fontWeight:"bold" ,padding:"0.5em  0.6em"}} text="Sign Up"/> 
             </div>
           </div>
         </nav>
