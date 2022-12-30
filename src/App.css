@@ -245,6 +245,9 @@ justify-content: center;
 .horisontal{
   margin: 0.5em -1em;
 }
+.shorten-link{
+  color: var(--Cyan);
+}
 }
 
 @media only screen and (min-width:481px){
