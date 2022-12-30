@@ -11,17 +11,17 @@ const Link = () => {
   '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
 
   // declare your various states 
-  const [name,setname] =useState()
+  const [name,setname] =useState();
   const [links,setlinks]= useState([]);
-  const [users, setUsers] = useState([])
-  const [short,setshort]= useState("")
+  const [users, setUsers] = useState([]);
+  const [short,setshort]= useState("");
 
   // handle the states and its behaviours 
   const handleChange =(e)=>{
     let inputVal = e.target.value;
-    setname(inputVal)
-      
+    setname(inputVal)   
   }
+
       const handleSubmit=(e)=>{
         e.preventDefault();
         // setname("");
@@ -78,6 +78,7 @@ const fetchUserData = () => {
       }
       else{
         console.log("not a valid the link ");
+        alert("Enter a valid link");
         setname("");
       }
     })
@@ -90,15 +91,18 @@ useEffect(() => {
 
   return (
     <div >
-       
+           {/* <ul    className={`navlinks-mob ${display}`}  ></ul>  className='link'  */}
+
           <form action="" className="form main-link" onSubmit={handleSubmit}>  
-            <div className="link-input"> <input type="text" className='link' onChange={handleChange} 
-             placeholder='Shorten a link here' value={name} />  </div>
-            <div className="link-btn "> 
-            <Button text="Shorten it !" style={{width:"100%" ,fontSize:"18px",padding:"0.7em",fontWeight:"bold", borderRadius:"7px" }}  /> 
+            <div className="link-input">
+               <input type="text"  className={`link`}  onChange={handleChange} 
+             placeholder='Shorten a link here' value={name} /> 
+              </div>
+            <div className="link-btn " > 
+            <Button text="Shorten it !"  style={{width:"100%" ,fontSize:"18px",padding:"0.7em",fontWeight:"bold", borderRadius:"7px" }}  /> 
             </div>
             </form>
-            {/* setup an add the lements to the list  */}
+            {/* setup an add the lements to the list  */} 
             {
               links.map((link)=>{
                 const {id,name} = link
