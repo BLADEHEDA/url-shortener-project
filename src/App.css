@@ -112,7 +112,7 @@ hr{
   margin: 1.5em;
   padding: 1.2em;
   border-radius: 5px;
-  margin-bottom:4em;
+  /* margin-bottom:4em; */
 }
 .link{
   width: 100%;
@@ -129,6 +129,7 @@ hr{
   margin: 2.5em;
   text-align: center;
   margin-bottom: 5em;
+  margin-top: 5em;
 }
 .ststs-content{
   line-height: 25px;
@@ -221,6 +222,21 @@ justify-content: center;
 }
 .icons{
   padding:0em 0.5em 0em 0.5em;
+}
+/* tstyling of the link section active */
+.shortened{
+  /* border: solid 1px black; */
+  margin:1em 1.5em;
+  padding: 1em;
+  font-size: 17px;
+ background: white;
+ border-radius: 5px;
+}
+.shorten-btn{
+  margin-top: 1em;
+}
+.horisontal{
+  margin: 0.5em -1em;
 }
 }
 
@@ -495,4 +511,34 @@ justify-content: center;
         margin-top: 2em;
         flex: 30%;
       }
-  }
+      /* tstyling of the link section active */
+.shortened{
+  margin: 0.5em 4em;
+ display: flex;
+ justify-content: space-between;
+}
+.shorten-btn{
+  margin-top: 0em;
+}
+.horisontal{
+display: none;
+}
+.link-active-one{
+  flex:60%;
+  margin-top: 0.5em;
+}
+.link-active-two{
+  display: flex;
+  justify-content: space-between;
+  flex:40%
+}
+.shorten-link{
+  flex:75%;
+  margin-top: 0.5em;
+  color: var(--Cyan);
+}
+.shorten-btn{
+  flex:25%;
+} 
+
+  } 
