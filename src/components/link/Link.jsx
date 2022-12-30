@@ -78,11 +78,9 @@ const fetchUserData = () => {
       }
       else{
         console.log("not a valid the link ");
-        alert("Enter a valid link");
         setname("");
       }
     })
-
 }
 useEffect(() => {
   fetchUserData()
