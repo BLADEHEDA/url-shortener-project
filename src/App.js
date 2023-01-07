@@ -7,6 +7,7 @@ import Footer from  "./components/footer/Footer"
 import recog from "./components/images/icon-brand-recognition.svg"
 import records from "./components/images/icon-detailed-records.svg"
 import full from "./components/images/icon-fully-customizable.svg"
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const brand1= {
   title:"  Brand Recognition",
