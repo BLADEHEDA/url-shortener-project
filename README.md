@@ -1,11 +1,11 @@
-click on this link to preview the live site  https://url-shortener-ap.netlify.app/
-https://portfolio-ajax484.vercel.app/?s=09
+click on this link to preview the live site url-shorteners-app.netlify.app
+
 
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+A sample peortfoliowhere inspiration can be gotten https://portfolio-ajax484.vercel.app/?s=09
 ## Available Scripts
 
 In the project directory, you can run:
