@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import Button from '../button/Button'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 
 const Link = () => {
   // declaring the variable to validate the url
@@ -17,25 +18,31 @@ const Link = () => {
   const [users, setUsers] = useState([]);
   const [short,setshort]= useState("");
   const [copied,setcopied]= useState(false);
+  const [formerrors,setformerrors]=useState(false);
 
+  let invalidLink
+    let inputVal
   // handle the states and its behaviours 
   const handleChange =(e)=>{
-    let inputVal = e.target.value;
-    setname(inputVal)   
+    inputVal = e.target.value;
+      setname(inputVal); 
   }
 
       const handleSubmit=(e)=>{
         e.preventDefault();
+        // check if the link is valid 
+          if(!urlPattern.test(name)){  
+            console.log("not a valid the link ");
+            setformerrors(true);
+            setname("");
+         }
+      // if not fetch the data 
         fetchUserData();
         setname("");
     }
-    // // the function that implements the copy functionality to clpboard 
-    // const copy=()=>{
-    //   setcopied(true);
-    //  console.log(copied);
-    // }
 
     console.log(name +" is the input");
+
 // The beginning of the fetching from the api and shortening the link 
 const fetchUserData = () => {
   fetch(`https://api.shrtco.de/v2/shorten?url=${name}`)
@@ -44,8 +51,9 @@ const fetchUserData = () => {
     })
     .then(data => {
       setUsers(data)
-      // verify the validity of the url and render the Api datat based on ots output 
       if(urlPattern.test(name)){
+
+        setformerrors(false);
         console.log(name);
         let shortlink= data.result.full_short_link  
 
@@ -61,25 +69,19 @@ const fetchUserData = () => {
         console.log("Thsi  is  a valid the link ");
         setname("");
       }
-      else{
-        console.log("not a valid the link ");
-        setname("");
-      }
     })
 }
 useEffect(() => {
   fetchUserData()
 },[])
-// the end of the api fetch the beginnning of parametrs analysiS
 
   return (
     <div >
-           {/* <ul    className={`navlinks-mob ${display}`}  ></ul>  className='link'  */}
-
           <form action="" className="form main-link" onSubmit={handleSubmit}>  
             <div className="link-input">
                <input type="text"  className={`link`}  onChange={handleChange} 
-             placeholder='Shorten a link here' value={name} /> 
+             placeholder='Shorten a link here' value={name} />  
+           {formerrors ?<div className="error">Please add a link </div>:null }
               </div>
             <div className="link-btn " > 
             <Button text="Shorten it !"  style={{width:"100%" ,fontSize:"18px",padding:"0.7em",fontWeight:"bold", borderRadius:"7px" }}  /> 
@@ -93,12 +95,12 @@ useEffect(() => {
                     <article className="link-active-one"> {name} </article>  <hr className='horisontal' />
                       <article className="link-active-two">
                       <div className="shorten-link"> {short} </div>
-
+                    
                         <CopyToClipboard  text={short}  onCopy={() =>setcopied(true)}> 
-                        <div className="shorten-btn">  
-                        <Button text="copy  " style={{width:"100%" ,fontSize:"17px",
-                        padding:"0.6em",fontWeight:"bold", borderRadius:"7px" }}  />
-                         </div>
+                            <div className="shorten-btn">  
+                            <Button text="copy  " style={{width:"100%" ,fontSize:"17px",
+                             padding:"0.6em",fontWeight:"bold", borderRadius:"7px" }}  />
+                            </div>
                         </CopyToClipboard>
                       </article>
                 </section>

@@ -125,6 +125,11 @@ hr{
   font-size: 17px;
   border: none;
 }
+.error{
+ color:var(--Red);
+ font-size: 15px;
+ margin-top: -12px;
+}
 .link-btn {
   margin-top: 0.5em;
 }
@@ -580,6 +585,5 @@ display: none;
 }
 .shorten-btn{
   flex:25%;
-} 
-
+}
   } 
